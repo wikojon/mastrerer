@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <script src="main.js"></script>
+    <title>Pizzaria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#">Pizzaria</a>
+        <div class="topnav-right">
+         <a href="#viewblock">View Menu</a>
+         <a href="#addTopings">Add Menu</a>
+        </div>
+    </div>
+<div class="top">
+    <ul class="navbar" id="mynavbar">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#menu">MENU</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#googlemap">CONTACT</a></li>
+    </ul>
+     </div>
+<header class="bgimg display-container grayscale-min" id="home">
+  <div class="display-bottomleft padding">
+    <span class="tag xlarge">Open from 10am to 12pm</span>
+  </div>
+  <div class="display-middle center">
+  <span class="text-white hide-large hide-medium" ><b>thin<br>CRUST PIZZA</b></span>
+    <p><a href="#menu" class="btn xxlarge padding">Let me see the menu</a></p>
+  </div>
+</header>
+<div class="container black padding-64 xxlarge" id="menu">
+  <div class="content">
+  
+    <h1 class="center jumbo" style="margin-bottom:64px">THE MENU</h1>
+  <div>
+    <button class="tab1">PIZZA</button>
+  <button class="tab2">SALADAS</button>
+    <button class="tab3">STARTER</button>
+</div>
+  <div id="Pizza" class="pizza1">
+      <h1><b>Margherita</b> <span class="span">$12.50</span></h1>
+      <p class="text">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="span">$15.50</span></h1>
+      <p class="text">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      
+      <h1><b>Chicken</b> <span class="span">$17.00</span></h1>
+      <p class="text">Fresh tomatoes, mozzarella, chicken, onions</p>
+      <hr>
+
+      <h1><b>Pineapple'o'clock</b> <span class="span">$16.50</span></h1>
+      <p class="text">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+      <hr>
+
+      <h1><b>Meat Town</b> <span class="span1">Hot!</span><span class="span">$20.00</span></h1>
+      <p class="text">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+      <hr>
+
+      <h1><b>Parma</b> <span class="span1">New</span><span class="span">$21.50</span></h1>
+      <p class="text">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+    </div>
+  
+    <div id="Pasta" class="pasta1">
+      <h1><b>Lasagna</b> <span class="span1">Popular</span> <span class="span">$13.50</span></h1>
+      <p class="text">Special sauce, mozzarella, parmesan, ground beef</p>
+      <hr>
+   
+      <h1><b>Ravioli</b> <span class="span">$14.50</span></h1>
+      <p class="text">Ravioli filled with cheese</p>
+      <hr>
+      
+      <h1><b>Spaghetti Classica</b> <span class="span">$11.00</span></h1>
+      <p class="text">Fresh tomatoes, onions, ground beef</p>
+      <hr>
+
+      <h1><b>Seafood pasta</b> <span class="span">$25.50</span></h1>
+      <p class="text">Salmon, shrimp, lobster, garlic</p>
+    </div>
+  <div id="Starter" class="starter1" >
+      <h1><b>Today's Soup</b> <span class="span1">Seasonal</span><span class="span">$5.50</span></h1>
+      <p class="text">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Bruschetta</b> <span class="span">$8.50</span></h1>
+      <p class="text">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><b>Garlic bread</b> <span class="span">$9.50</span></h1>
+      <p class="text">Grilled ciabatta, garlic butter, onions</p>
+      <hr>
+      
+      <h1><b>Tomozzarella</b> <span class="span">$10.50</span></h1>
+      <p class="text">Tomatoes and mozzarella</p>
+    <div class="row" id="viewblock">
+        <div  class="img_div"> 
+            <img class="img-responsive"  src="images/pizza.png">
+        </div>
+      <!-- Add menu_div here and create button to call getmenu() -->
+    </div>
+    
+    <div class="newRow" id="addTopings">
+        <div class="block1">
+            <input id="add_item" placeholder="Type here to add toppings?"/></br>
+            <button id="add_toppings" onclick="add_item()" >Recommend a new Pizza</button>
+         <h1>Pizza Builder</h1>
+      <p class="description">Build your own pizza with a flavor of HTML, CSS, and JS.</p>
+    </header>
+    <!-- End Header -->
+
+    <!-- Controls -->
+    <div class="panel controls">
+      <ul>
+        <li>
+          <button class="btn btn-pepperonni active">Pepperonni</button>
+        </li>
+        <li>
+          <button class="btn btn-mushrooms active">Mushrooms</button>
+        </li>
+        <li>
+          <button class="btn btn-green-peppers active">Green peppers</button>
+        </li>
+        <li>
+          <button class="btn btn-sauce active">White sauce</button>
+        </li>
+        <li>
+          <button class="btn btn-crust active">Gluten-free crust</button>
+        </li>
+      </ul>
+    </div>
+    <!-- End Controls -->
+
+    <!-- Price -->
+    <aside class="panel price">
+      <h2>Your pizza's price</h2>
+
+      <b>$10 cheese pizza</b>
+      <ul>
+        <li>$1 pepperonni</li>
+        <li>$1 mushrooms</li>
+        <li>$1 green peppers</li>
+        <li>$3 white sauce</li>
+        <li>$5 gluten-free crust</li>
+      </ul>
+      <strong>$<span id="totalPrice">21<span></strong>
+
+    </aside>
+    <!-- End Price -->
+
+    <!-- Begin Pizza -->
+    <div id="pizza">
+      <section class="green-pepper one"></section>
+      <section class="green-pepper two"></section>
+      <section class="green-pepper three"></section>
+      <section class="green-pepper four"></section>
+      <section class="green-pepper five"></section>
+      <section class="green-pepper six"></section>
+      <section class="green-pepper seven"></section>
+      <section class="green-pepper eight"></section>
+      <section class="green-pepper nine"></section>
+      <section class="green-pepper ten"></section>
+      <section class="green-pepper eleven"></section>
+      <section class="green-pepper twelve"></section>
+      <section class="green-pepper thirteen"></section>
+      <section class="green-pepper fourteen"></section>
+      <section class="green-pepper fifteen"></section>
+      <section class="green-pepper sixteen"></section>
+      <section class="green-pepper seventeen"></section>
+      <section class="green-pepper eightteen"></section>
+      <section class="green-pepper nineteen"></section>
+      <section class="green-pepper twenty"></section>
+      <section class="green-pepper twenty-one"></section>
+
+      <section class="mushroom one">
+        <div class="cap">1</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom two">
+        <div class="cap">2</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom three">
+        <div class="cap">3</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom four">
+        <div class="cap">4</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom five">
+        <div class="cap">5</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom six">
+        <div class="cap">6</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom seven">
+        <div class="cap">7</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom eight">
+        <div class="cap">8</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom nine">
+        <div class="cap">9</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom ten">
+        <div class="cap">10</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom eleven">
+        <div class="cap">11</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twelve">
+        <div class="cap">12</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom thirteen">
+        <div class="cap">13</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom fourteen">
+        <div class="cap">14</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom fifteen">
+        <div class="cap">15</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom sixteen">
+        <div class="cap">16</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom seventeen">
+        <div class="cap">17</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom eighteen">
+        <div class="cap">18</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom nineteen">
+        <div class="cap">19</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twenty">
+        <div class="cap">20</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twenty-one">
+        <div class="cap">21</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twenty-two">
+        <div class="cap">22</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twenty-three">
+        <div class="cap">23</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twenty-four">
+        <div class="cap">24</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twenty-five">
+        <div class="cap">25</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twenty-six">
+        <div class="cap">26</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twenty-seven">
+        <div class="cap">27</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twenty-eight">
+        <div class="cap">28</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom twenty-nine">
+        <div class="cap">29</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom thirty">
+        <div class="cap">30</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom thirty-one">
+        <div class="cap">31</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="mushroom thirty-two">
+        <div class="cap">31</div>
+        <div class="stem"></div>
+      </section>
+
+      <section class="pep one">1</section>
+      <section class="pep two">2</section>
+      <section class="pep three">3</section>
+      <section class="pep four">4</section>
+      <section class="pep five">5</section>
+      <section class="pep six">6</section>
+      <section class="pep seven">7</section>
+      <section class="pep eight">8</section>
+      <section class="pep nine">9</section>
+      <section class="pep ten">10</section>
+      <section class="pep eleven">11</section>
+      <section class="pep twelve">12</section>
+      <section class="pep thirteen">13</section>
+      <section class="pep fourteen">14</section>
+      <section class="pep fifteen">15</section>
+      <section class="pep sixteen">16</section>
+      <section class="pep seventeen">17</section>
+      <section class="pep eightteen">18</section>
+      <section class="pep nineteen">19</section>
+      <section class="pep twenty">20</section>
+      <section class="pep twenty-one">21</section>
+      <section class="pep twenty-two">22</section>
+      <section class="pep twenty-three">23</section>
+      <section class="pep twenty-four">24</section>
+      <section class="pep twenty-five">25</section>
+      <section class="pep twenty-six">26</section>
+      <section class="pep twenty-seven">27</section>
+      <section class="pep twenty-eight">28</section>
+      <section class="pep twenty-nine">29</section>
+      <section class="pep thirty">30</section>
+      <section class="pep thirty-one">31</section>
+      <section class="pep thirty-three">33</section>
+
+      <section class="crust crust-gluten-free">
+        <section class="cheese"></section>
+        <section class="sauce sauce-white"></section>
+      </section>
+    </div>
+    <!-- End Pizza -->
+
+    <!-- Begin Crumbs -->
+    <p id="crumbs">&there4;</p>
+    <!-- End Crumbs -->
+
+    <!-- Footer -->
+    
+
+        </div>
+        
+    </div>
+     <!-- Add display_addedmenu div here! -->
+    <div>
+        <img class="img-responsive"  src="images/topping.png">
+    </div>
+
+</body>
+</html>
